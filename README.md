@@ -1,8 +1,7 @@
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/)
 
 # Proyecto Final: Modelado del Sistema Respiratorio con Enfoque en Asma
-
-<img width="1536" height="1024" alt="Sistema respiratorio asma" src="https://github.com/user-attachments/assets/coloca-aqui-tu-imagen" />
+<img width="1122" height="1402" alt="OSIRISASHIA" src="https://github.com/user-attachments/assets/a6e9cb9f-a22e-434a-bab8-e0df91c53079" />
 
 ## Instructor
 
