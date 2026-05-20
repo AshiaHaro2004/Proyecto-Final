@@ -1,0 +1,209 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, May 18, 2026 19:31:33}
+%TCIDATA{LastRevised=Tuesday, May 19, 2026 14:33:54}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\emph{FUNCION\ DE\ TRANSFERENCIA.}
+
+\[
+R_{1}i_{1}\left( t\right) +\frac{1}{C}\int \left[ i_{1}\left( t\right)
+-i_{2}\left( t\right) \right] dt=V_{e}\left( t\right) 
+\]
+
+\[
+L\frac{di_{2}\left( t\right) }{dt}+\left( R_{2}+R_{3}\right) i_{2}\left(
+t\right) =\frac{1}{C}\int \left[ i_{1}\left( t\right) -i_{2}\left( t\right) %
+\right] dt 
+\]
+
+\[
+F_{s}\left( t\right) =V_{R3}\left( t\right) =R_{3}i_{2}\left( t\right) 
+\]
+
+\bigskip Aplicando transformada de Laplace:
+
+$\left( 1\right) $%
+\[
+R_{1}i_{1}\left( s\right) +\frac{1}{C_{s}}\int \left[ i_{1}\left( s\right)
+-i_{2}\left( s\right) \right] =V_{e}\left( s\right) 
+\]
+$\ \ \ \ \ \ \left( 2\right) $%
+\[
+L_{s}I_{2}\left( s\right) +\left( R_{2}+R_{3}\right) i_{2}\left( s\right) =%
+\frac{1}{C}\left[ i_{1}\left( s\right) -i_{2}\left( s\right) \right] 
+\]
+
+Al despejar la segunda ecuacion se agrupa el lado izquierdo:
+
+\[
+L_{s}+\left( R_{2}+R_{3}\right) i_{2}\left( s\right) =\frac{1}{C}\left[
+i_{1}\left( s\right) -i_{2}\left( s\right) \right] 
+\]
+
+Multiplicamos por $C_{s}:$
+
+\[
+C_{s}[L_{s}\left( R_{2}+R_{3}\right) ]i_{2}\left( s\right) =i_{1}\left(
+s\right) -i_{2}\left( s\right) 
+\]
+
+Pasamos $i_{2}\left( s\right) $ al otro lado:
+
+\[
+i_{1}\left( s\right) =[C_{s}(L_{s}+R_{2}+R_{3}]+si+1]I_{2}\left( s\right) 
+\]
+
+Sustituir ec. (2) en ec. (1):
+
+\bigskip
+
+\[
+R_{1}i_{1}\left( s\right) +[L_{s}+\left( R_{2}+R_{3}\right) ]i_{2}\left(
+s\right) =V_{e}\left( s\right) 
+\]
+
+Sustituimos $i_{1}\left( s\right) :$
+
+\[
+R_{1}[LCs^{2}+C(R_{2}+R_{3})s+1]i_{2}\left( s\right) +[L_{s}+\left(
+R_{2}+R_{3}\right) ]i_{2}\left( s\right) =V_{e}\left( s\right) 
+\]
+
+Factorizamos $i_{2}\left( s\right) :$
+
+\[
+I_{2}(s)\{R_{1}[LCs^{2}+R_{1}C(R_{2}+R_{3})s+1]+L_{s}+\left(
+R_{2}+R_{3}\right) \}=V_{e}\left( s\right) 
+\]
+
+Desarollamos:
+
+\[
+I_{2}(s)[R_{1}LCs^{2}+R_{1}C(R_{2}+R_{3})s+R_{1}+L_{s}+R_{2}+R_{3}=V_{e}%
+\left( s\right) 
+\]
+
+Agrupamos por potencias de $s:$
+
+\[
+I_{2}(s)[R_{1}LCs^{2}+(L+R_{1}C(R_{2}+R_{3}))s+(R_{1}+R_{2}+R_{3})]=V_{e}%
+\left( s\right) 
+\]
+
+Se obtiene $\frac{I_{2}(s)}{V_{e}\left( s\right) }:$
+
+\[
+\frac{I_{2}(s)}{V_{e}\left( s\right) }=\frac{1}{%
+R_{1}LCs^{2}+(L+R_{1}C(R_{2}+R_{3}))s+(R_{1}+R_{2}+R_{3})} 
+\]
+
+Como la salida se encuentra en $R_{3}$ la salida es:
+
+\[
+F_{s}(s)=R_{3}I_{2}\left( s\right) 
+\]
+
+Entonces...
+
+\[
+\frac{F_{s}(s)}{V_{e}(s)}=R_{3}\frac{I_{2}(s)}{V_{e}(s)} 
+\]
+
+Por lo tanto la funcion de transferencia final es de:
+
+\[
+\frac{F_{s}(s)}{V_{e}(s)}=\frac{R_{3}}{%
+R_{1}LCs^{2}+[L+R_{1}C(R_{2}+R_{3})]s+(R_{1}+R_{2}+R_{3})} 
+\]
+
+\bigskip
+
+\emph{ERROR\ EN\ ESTADO\ ESTACIONARIO.}
+
+El error en estado estacionario es:
+
+\[
+e_{ss}=1-\frac{R_{3}}{R_{1}+R_{2}+R_{3}}
+\]
+
+\[
+e_{ss}=\frac{R_{1}+R_{2}+R_{3}-R_{3}}{R_{1}+R_{2}+R_{3}}
+\]
+
+\[
+e_{ss}=\frac{R_{1}+R_{2}}{R_{1}+R_{2}+R_{3}}
+\]
+
+\emph{CASO.}
+
+Sustituyendo:
+
+\[
+e_{ss}=\frac{12+4.7}{12+4.7+18}\rightarrow e_{ss}=\frac{16.7}{34.7}=0.48
+\]
+
+\emph{CONTROL.}
+
+Sustituyendo:
+
+\[
+e_{ss}=\frac{1+1}{1+1+10}\rightarrow e_{ss}=\frac{2}{12}=0.167
+\]
+
+\emph{ESTABILIDAD DEL SISTEMA.}
+
+\textbf{Control; Estable con respuesta sobreamortiguada.}
+
+\[
+\lambda _{1}=-23.2116
+\]
+
+\[
+\lambda _{2}=-54998.065
+\]
+
+\textbf{Caso; Estable con respuesta sobreamortiguada}
+
+\[
+\lambda _{1}=-580057
+\]
+
+\[
+\lambda _{2}=-11329.8731
+\]
+
+\end{document}
