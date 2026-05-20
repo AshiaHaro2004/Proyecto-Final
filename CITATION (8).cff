@@ -1,0 +1,30 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Proyecto Final: Sistema respiratorio '
+message: Modelado de Sistemas Fisiológicos / Ingeniería Biomédica
+type: software
+authors:
+  - given-names: Angelica Ashia
+    family-names: Haro Najar
+    email: l23210708@tectijuana.edu.mx
+    affiliation: 'Tecnológico Nacional de México '
+  - given-names: 'Osiris Jaylin '
+    family-names: Chavez Hernandez
+    email: l23210697@tectijuana.edu.mx
+    affiliation: Tecnológico Nacional de México
+identifiers:
+  - type: url
+    value: 'https://github.com/AshiaHaro2004/Proyecto-Final'
+    description: Repositorio de Github
+repository-code: 'https://github.com/AshiaHaro2004/Proyecto-Final'
+keywords:
+  - Asma
+  - Inertancia del aire
+  - Flujo de aire
+  - Sistema respiratorio
+  - Estabilidad del sistema
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-05-20'
