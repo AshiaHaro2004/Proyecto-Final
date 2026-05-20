@@ -6,8 +6,11 @@ Tecnológico Nacional de México [TecNM - Tijuana]
 Blvd. Alberto Limón Padilla s/n, C.P. 22454, Tijuana, B.C., México
 
 Nombre del alumno: Osiris Jaylin Chavez Hernandez 
+                   Angelica Ashai Haro Najar 
 Número de control: 23210697
+                   23210708
 Correo institucional: l23210697@tectijuana.edu.mx
+                      l23210708@tectijuana.edu.mx
 
 Asignatura: Modelado de Sistemas Fisiológicos
 Docente: Dr. Paul Antonio Valle Trujillo; paul.valle@tectijuana.edu.mx
