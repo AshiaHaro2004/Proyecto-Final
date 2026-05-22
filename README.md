@@ -286,6 +286,11 @@ $$
 $$
 
 Por lo tanto, el sistema **no presenta oscilaciones** y su respuesta converge de manera estable.
+
+## BioRender
+
+El diagrama elaborado en BioRender permite visualizar la comparación entre el sistema respiratorio en condición control y en caso asmático. En la sección de control se representa un flujo aéreo adecuado, resistencia bronquial normal y una respuesta respiratoria estable. En el caso asmático se muestra el aumento de la resistencia en las vías respiratorias, la disminución del flujo de aire y la alteración de la respuesta del sistema.
+
 <img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/7a1dc2dc-fb96-418e-8d7d-4b801620dd0b" />
 
 ## Herramientas utilizadas
