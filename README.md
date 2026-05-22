@@ -7,17 +7,21 @@
   <img width="650" alt="OSIRISASHIA" src="https://github.com/user-attachments/assets/a6e9cb9f-a22e-434a-bab8-e0df91c53079" />
 </p>
 
-## Instructor
+## Información de las estudiantes
 
-Dr. Paul Antonio Valle Trujillo  
+Osiris Jaylin Chavez Hernandez [23210697]; l23210697@tectijuana.edu.mx  
 
-paul.valle@tectijuana.edu.mx  
+Angélica Ashia Haro Najar [23210708]; l23210708@tectijuana.edu.mx  
 
-https://biomath.xyz/  
+Modelado de Sistemas Fisiológicos  
 
-Departamento de Ingeniería Eléctrica y Electrónica,  
-Tecnológico Nacional de México / Instituto Tecnológico de Tijuana,  
-Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México.
+Ingeniería Biomédica  
+
+## Docente
+
+Dr. Paul Antonio Valle Trujillo; paul.valle@tectijuana.edu.mx  
+
+Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México.
 
 ## Información general
 
