@@ -67,24 +67,39 @@ Se implementa un controlador PID con el objetivo de mejorar la respuesta del sis
 
 ## Modelo análogo RLC
 
-El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire y la presión respiratoria.
+El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire, la presión respiratoria y la resistencia de las vías respiratorias.
 
-La ecuación general de un sistema de segundo orden puede expresarse como:
+Para este modelo se consideran dos corrientes principales: $i_1(t)$ e $i_2(t)$. La corriente $i_1(t)$ representa el flujo asociado a la entrada del sistema, mientras que $i_2(t)$ se relaciona con la respuesta del sistema respiratorio. La diferencia entre ambas corrientes, $i_1(t)-i_2(t)$, está asociada al efecto de almacenamiento producido por la compliance pulmonar $C$.
+
+Las ecuaciones que describen el comportamiento del sistema son:
 
 $$
-L \frac{d^{2}q(t)}{dt^{2}} + R \frac{dq(t)}{dt} + \frac{1}{C}q(t) = V(t)
+R_1 i_1(t) + \frac{1}{C}\int [i_1(t)-i_2(t)]dt = V_e(t)
+$$
+
+$$
+L\frac{di_2(t)}{dt} + (R_2+R_3)i_2(t) =
+\frac{1}{C}\int [i_1(t)-i_2(t)]dt
+$$
+
+$$
+F_s(t)=V_{R3}(t)=R_3 i_2(t)
 $$
 
 Donde:
 
+- $R_1$ representa la resistencia inicial de las vías respiratorias.
+- $R_2$ representa una resistencia adicional del sistema respiratorio.
+- $R_3$ representa la resistencia asociada a la salida del sistema.
 - $L$ representa la inertancia del aire.
-- $R$ representa la resistencia de las vías respiratorias.
 - $C$ representa la compliance pulmonar.
-- $V(t)$ representa la presión respiratoria de entrada.
-- $q(t)$ representa la variable asociada al volumen o desplazamiento del aire.
+- $V_e(t)$ representa la presión respiratoria de entrada.
+- $i_1(t)$ representa la corriente o flujo de entrada.
+- $i_2(t)$ representa la corriente o flujo de salida del sistema.
+- $F_s(t)$ representa la señal de salida del sistema.
+- $V_{R3}(t)$ representa el voltaje en la resistencia $R_3$, equivalente a la salida del modelo.
 
-A partir de esta ecuación, se obtiene una función de transferencia que permite analizar la respuesta del sistema ante una entrada determinada.
-
+A partir de estas ecuaciones se puede obtener la función de transferencia del sistema, relacionando la entrada $V_e(t)$ con la salida $F_s(t)$. Esto permite analizar la respuesta respiratoria del modelo ante diferentes condiciones, como el caso control y el caso con alteración en las vías respiratorias.
 ## Función de transferencia
 
 La función de transferencia permite relacionar la salida del sistema con la entrada aplicada. Para el sistema respiratorio análogo RLC, se considera una respuesta dinámica dependiente de los valores de resistencia, inductancia y capacitancia.
