@@ -298,10 +298,7 @@ El diagrama elaborado en BioRender permite visualizar la comparación entre el s
 - MATLAB
 - Simulink
 - Spyder
-- Python
-- NumPy
-- Matplotlib
-- Librería Control
+- Scientific WorkPlace
 - BioRender
 
 ## Desarrollo general
