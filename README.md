@@ -31,8 +31,6 @@ Para representar este comportamiento, se utilizó una analogía eléctrica tipo 
 
 Modelar el comportamiento dinámico del sistema respiratorio mediante una analogía eléctrica RLC para analizar los efectos del asma sobre el flujo de aire, comparando la respuesta del sistema en condición control, caso asmático y tratamiento mediante controlador PID.
 
-<img width="1387" height="535" alt="Modelo respiratorio" src="https://github.com/user-attachments/assets/coloca-aqui-tu-grafica" />
-
 El sistema respiratorio tiene como función principal permitir el intercambio de gases entre el organismo y el ambiente. En condiciones normales, el aire entra a través de las vías respiratorias y llega hasta los alvéolos, donde ocurre el intercambio de oxígeno y dióxido de carbono. Sin embargo, en el asma, el estrechamiento de las vías aéreas aumenta la resistencia respiratoria y disminuye el flujo de aire.
 
 La simulación del sistema permite observar cómo cambia la respuesta respiratoria cuando se modifican los parámetros del modelo. En el caso asmático, el aumento de la resistencia representa la dificultad del aire para circular por los bronquios. Posteriormente, se implementa un controlador PID con el propósito de mejorar la respuesta del sistema y acercarla al comportamiento del caso control.
