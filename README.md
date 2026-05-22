@@ -120,6 +120,67 @@ Donde:
 - $V_{R3}(t)$ representa el voltaje en la resistencia $R_3$, equivalente a la salida del modelo.
 
 A partir de estas ecuaciones se puede obtener la función de transferencia del sistema, relacionando la entrada $V_e(t)$ con la salida $F_s(t)$. Esto permite analizar la respuesta respiratoria del modelo ante diferentes condiciones, como el caso control y el caso con alteración en las vías respiratorias.
+
+## Expresiones de las corrientes del circuito
+
+A partir del análisis en el dominio de Laplace, las ecuaciones del circuito son:
+
+$$
+R_1 i_1(s) + \frac{1}{Cs}\left[i_1(s)-i_2(s)\right] = V_e(s)
+$$
+
+$$
+Ls\,i_2(s) + (R_2+R_3)i_2(s) = \frac{1}{Cs}\left[i_1(s)-i_2(s)\right]
+$$
+
+### Corriente \(i_1(s)\)
+
+Al despejar la segunda ecuación, se obtiene la expresión de la corriente \(i_1(s)\) en función de \(i_2(s)\):
+
+$$
+i_1(s) = \left[LCs^2 + C(R_2+R_3)s + 1\right]i_2(s)
+$$
+
+### Corriente \(i_2(s)\)
+
+La corriente \(i_2(s)\) se obtiene a partir de la entrada \(V_e(s)\):
+
+$$
+\frac{i_2(s)}{V_e(s)} =
+\frac{1}
+{R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
+$$
+
+Por lo tanto:
+
+$$
+i_2(s) =
+\frac{V_e(s)}
+{R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
+$$
+
+### Corriente en \(R_3\)
+
+Como la salida se encuentra en la resistencia \(R_3\), la corriente que pasa por \(R_3\) corresponde a:
+
+$$
+i_{R_3}(s) = i_2(s)
+$$
+
+Y el voltaje de salida es:
+
+$$
+F_s(s) = V_{R_3}(s) = R_3 i_2(s)
+$$
+
+### Corriente del capacitor
+
+La corriente que atraviesa el capacitor está dada por la diferencia entre las corrientes de malla:
+
+$$
+i_C(s) = i_1(s) - i_2(s)
+$$
+
 ## Función de transferencia
 
 La función de transferencia permite relacionar la salida del sistema con la entrada aplicada. Para el sistema respiratorio análogo RLC, se considera una respuesta dinámica dependiente de los valores de resistencia, inductancia y capacitancia.
