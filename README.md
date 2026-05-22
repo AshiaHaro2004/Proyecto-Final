@@ -136,6 +136,56 @@ $$
 
 Esta expresión permite comparar el comportamiento del sistema respiratorio en estado normal y en condición asmática. Al aumentar la resistencia, la respuesta del sistema cambia, representando la obstrucción del flujo de aire característica del asma.
 
+## Error en estado estacionario
+
+El error en estado estacionario se calcula como:
+
+$$
+e_{ss} = 1 - \frac{R_3}{R_1 + R_2 + R_3}
+$$
+
+Simplificando:
+
+$$
+e_{ss} = \frac{R_1 + R_2 + R_3 - R_3}{R_1 + R_2 + R_3}
+$$
+
+$$
+e_{ss} = \frac{R_1 + R_2}{R_1 + R_2 + R_3}
+$$
+
+### Caso
+
+Sustituyendo los valores del caso:
+
+$$
+e_{ss} = \frac{12 + 4.7}{12 + 4.7 + 18}
+$$
+
+$$
+e_{ss} = \frac{16.7}{34.7}
+$$
+
+$$
+e_{ss} = 0.48
+$$
+
+### Control
+
+Sustituyendo los valores del control:
+
+$$
+e_{ss} = \frac{1 + 1}{1 + 1 + 10}
+$$
+
+$$
+e_{ss} = \frac{2}{12}
+$$
+
+$$
+e_{ss} = 0.167
+$$
+
 <img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/7a1dc2dc-fb96-418e-8d7d-4b801620dd0b" />
 
 ## Herramientas utilizadas
