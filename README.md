@@ -121,64 +121,74 @@ Donde:
 
 A partir de estas ecuaciones se puede obtener la función de transferencia del sistema, relacionando la entrada $V_e(t)$ con la salida $F_s(t)$. Esto permite analizar la respuesta respiratoria del modelo ante diferentes condiciones, como el caso control y el caso con alteración en las vías respiratorias.
 
-## Expresiones de las corrientes del circuito
+## Expresiones de las corrientes
 
-A partir del análisis en el dominio de Laplace, las ecuaciones del circuito son:
-
-$$
-R_1 i_1(s) + \frac{1}{Cs}\left[i_1(s)-i_2(s)\right] = V_e(s)
-$$
+A partir de las ecuaciones del circuito en el dominio de Laplace:
 
 $$
-Ls\,i_2(s) + (R_2+R_3)i_2(s) = \frac{1}{Cs}\left[i_1(s)-i_2(s)\right]
+R_1 I_1(s) + \frac{1}{Cs}\left[I_1(s)-I_2(s)\right] = V_e(s)
 $$
 
-### Corriente \(i_1(s)\)
-
-Al despejar la segunda ecuación, se obtiene la expresión de la corriente \(i_1(s)\) en función de \(i_2(s)\):
-
 $$
-i_1(s) = \left[LCs^2 + C(R_2+R_3)s + 1\right]i_2(s)
+LsI_2(s) + (R_2+R_3)I_2(s) = \frac{1}{Cs}\left[I_1(s)-I_2(s)\right]
 $$
 
-### Corriente \(i_2(s)\)
-
-La corriente \(i_2(s)\) se obtiene a partir de la entrada \(V_e(s)\):
+Multiplicando la segunda ecuación por \(Cs\):
 
 $$
-\frac{i_2(s)}{V_e(s)} =
-\frac{1}
+Cs\left[LsI_2(s)+(R_2+R_3)I_2(s)\right] = I_1(s)-I_2(s)
+$$
+
+Factorizando:
+
+$$
+Cs\left[Ls+(R_2+R_3)\right]I_2(s) = I_1(s)-I_2(s)
+$$
+
+Despejando \(I_1(s)\):
+
+$$
+I_1(s) = \left[LCs^2 + C(R_2+R_3)s + 1\right]I_2(s)
+$$
+
+### Corriente \(I_2(s)\)
+
+Sustituyendo \(I_1(s)\) en la ecuación principal, se obtiene:
+
+$$
+I_2(s) =
+\frac{V_e(s)}
 {R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
 $$
 
 Por lo tanto:
 
 $$
-i_2(s) =
-\frac{V_e(s)}
+\frac{I_2(s)}{V_e(s)} =
+\frac{1}
 {R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
 $$
 
 ### Corriente en \(R_3\)
 
-Como la salida se encuentra en la resistencia \(R_3\), la corriente que pasa por \(R_3\) corresponde a:
+Como \(R_3\) se encuentra en la rama donde circula \(I_2(s)\), entonces:
 
 $$
-i_{R_3}(s) = i_2(s)
+I_{R_3}(s) = I_2(s)
 $$
 
-Y el voltaje de salida es:
+Y la salida del sistema es:
 
 $$
-F_s(s) = V_{R_3}(s) = R_3 i_2(s)
+F_s(s) = V_{R_3}(s) = R_3I_2(s)
 $$
 
 ### Corriente del capacitor
 
-La corriente que atraviesa el capacitor está dada por la diferencia entre las corrientes de malla:
+La corriente asociada al capacitor está dada por la diferencia entre las corrientes de las dos ramas:
 
 $$
-i_C(s) = i_1(s) - i_2(s)
+I_C(s) = I_1(s)-I_2(s)
 $$
 
 ## Función de transferencia
