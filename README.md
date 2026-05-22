@@ -57,9 +57,29 @@ La simulación del sistema permite observar cómo cambia la respuesta respirator
 
 Representa el comportamiento normal del sistema respiratorio. En esta condición, las vías respiratorias mantienen un diámetro adecuado, permitiendo un flujo de aire estable y una ventilación eficiente.
 
+### Sistema control
+
+| Componente | Parámetro | Componente fisiológico / neuronal | Unidad fisiológica equivalente | Valor control |
+|---|---|---|---|---|
+| R1 | Resistencia de las vías respiratorias principales | Tráquea y bronquios principales | cmH₂O·s/L | 1 kΩ |
+| R2 | Resistencia en bronquios o vías respiratorias internas | Bronquios | cmH₂O·s/L | 2 kΩ |
+| R3 | Resistencia en bronquiolos y tejido pulmonar | Bronquiolos y tejido pulmonar | cmH₂O·s/L | 10 kΩ |
+| L | Inertancia del aire | Flujo de aire en las vías respiratorias | cmH₂O·s²/L | 0.2 H |
+| C | Compliance pulmonar | Pulmones / capacidad de expansión pulmonar | L/cmH₂O | 47 µF |
+
 ### Caso: Asma
 
 Representa una condición patológica en la que existe inflamación bronquial, contracción del músculo liso y acumulación de moco. Estos factores provocan un aumento en la resistencia respiratoria, dificultando el paso del aire hacia los pulmones.
+
+### Sistema caso asmático
+
+| Componente | Parámetro | Componente fisiológico / neuronal | Unidad fisiológica equivalente | Valor caso |
+|---|---|---|---|---|
+| R1 | Resistencia de las vías respiratorias principales | Tráquea y bronquios principales | cmH₂O·s/L | 8 kΩ |
+| R2 | Resistencia en bronquios o vías respiratorias internas | Bronquios | cmH₂O·s/L | 12 kΩ |
+| R3 | Resistencia en bronquiolos y tejido pulmonar | Bronquiolos y tejido pulmonar | cmH₂O·s/L | 4.7 kΩ |
+| L | Inertancia del aire | Flujo de aire en las vías respiratorias | cmH₂O·s²/L | 1.5 H |
+| C | Compliance pulmonar | Pulmones / capacidad de expansión pulmonar | L/cmH₂O | 4.7 µF |
 
 ### Tratamiento PID
 
