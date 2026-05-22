@@ -85,7 +85,7 @@ Representa una condición patológica en la que existe inflamación bronquial, c
 
 Se implementa un controlador PID con el objetivo de mejorar la respuesta del sistema asmático. Este controlador busca reducir el error, estabilizar la señal y acercar la respuesta del caso patológico al comportamiento del sistema control.
 
-## Modelo análogo RLC
+## Modelo de ecuaciones integro-diferenciales
 
 El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire, la presión respiratoria y la resistencia de las vías respiratorias.
 
