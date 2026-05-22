@@ -186,6 +186,35 @@ $$
 e_{ss} = 0.167
 $$
 
+## Estabilidad del sistema
+
+### Control
+
+El sistema de control es **estable con respuesta sobreamortiguada**, debido a que sus raíces son reales, negativas y diferentes.
+
+$$
+\lambda_1 = -23.2116
+$$
+
+$$
+\lambda_2 = -54998.065
+$$
+
+Por lo tanto, el sistema **no presenta oscilaciones** y tiende a estabilizarse con el tiempo.
+
+### Caso
+
+El sistema del caso también es **estable con respuesta sobreamortiguada**, ya que sus raíces son reales, negativas y diferentes.
+
+$$
+\lambda_1 = -580057
+$$
+
+$$
+\lambda_2 = -11329.8731
+$$
+
+Por lo tanto, el sistema **no presenta oscilaciones** y su respuesta converge de manera estable.
 <img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/7a1dc2dc-fb96-418e-8d7d-4b801620dd0b" />
 
 ## Herramientas utilizadas
