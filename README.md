@@ -1,3 +1,6 @@
+<img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/7a1dc2dc-fb96-418e-8d7d-4b801620dd0b" />
+<img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/b5651cfc-4593-4e75-b2ff-5fd66aa2f877" />
+<img width="3000" height="3000" alt="Diagrama fisiológico sistema respiratorio asma" src="https://github.com/user-attachments/assets/8ca4d195-b9e7-4ca8-95bc-5e7a7077bf74" />
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/)
 
 # Proyecto Final: Modelado del Sistema Respiratorio con Enfoque en Asma
