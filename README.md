@@ -85,8 +85,14 @@ A partir de esta ecuación, se obtiene una función de transferencia que permite
 
 La función de transferencia permite relacionar la salida del sistema con la entrada aplicada. Para el sistema respiratorio análogo RLC, se considera una respuesta dinámica dependiente de los valores de resistencia, inductancia y capacitancia.
 
+Por lo tanto, la función de transferencia final es:
+
 $$
-G(s)=\frac{1}{LCs^{2}+RCs+1}
+\boxed{
+\frac{F_s(s)}{V_e(s)} =
+\frac{R_3}
+{R_1LCs^2 + \left[L + R_1C(R_2 + R_3)\right]s + (R_1 + R_2 + R_3)}
+}
 $$
 
 Esta expresión permite comparar el comportamiento del sistema respiratorio en estado normal y en condición asmática. Al aumentar la resistencia, la respuesta del sistema cambia, representando la obstrucción del flujo de aire característica del asma.
