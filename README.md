@@ -85,6 +85,31 @@ Representa una condición patológica en la que existe inflamación bronquial, c
 
 Se implementa un controlador PID con el objetivo de mejorar la respuesta del sistema asmático. Este controlador busca reducir el error, estabilizar la señal y acercar la respuesta del caso patológico al comportamiento del sistema control.
 
+## Ecuaciones principales del modelo
+
+El sistema respiratorio se representa mediante un circuito RLC. Las ecuaciones principales del modelo son:
+
+### Ecuación de la primera malla
+
+$$
+R_1 i_1(t) + \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt = V_e(t)
+$$
+
+### Ecuación de la segunda malla
+
+$$
+L\frac{di_2(t)}{dt} + (R_2+R_3)i_2(t)
+=
+\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
+$$
+
+### Ecuación de salida
+
+$$
+F_s(t) = V_{R_3}(t) = R_3 i_2(t)
+$$
+
+
 ## Modelo de ecuaciones integro-diferenciales
 
 El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire, la presión respiratoria y la resistencia de las vías respiratorias.
