@@ -104,21 +104,11 @@ Las ecuaciones integro-diferenciales que describen el comportamiento del circuit
 A partir del análisis del circuito RLC, las corrientes de malla se pueden expresar de la siguiente manera:
 
 $$
-i_1(t) =
-\frac{
-V_e(t) - \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
-}
-{R_1}
+i_1(t) = \frac{V_e(t) - \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt}{R_1}
 $$
 
 $$
-i_2(t) =
-\frac{
-\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
--
-L\frac{di_2(t)}{dt}
-}
-{R_2+R_3}
+i_2(t) = \frac{\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt - L\frac{di_2(t)}{dt}}{R_2+R_3}
 $$
 
 $$
