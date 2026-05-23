@@ -139,6 +139,8 @@ Esta expresión permite comparar el comportamiento del sistema respiratorio en e
 
 ## Error en estado estacionario
 
+El error en estado estacionario es:
+
 $$
 e_{ss} =
 \lim_{s \to 0}
@@ -149,22 +151,30 @@ e_{ss} =
 \right)
 $$
 
+Evaluando el límite:
+
 $$
 e_{ss} =
 1 -
 \frac{\displaystyle R_3}
-{\displaystyle R_1+R_2+R_3}
+{\displaystyle R_1 + R_2 + R_3}
 $$
 
 $$
 e_{ss} =
-\frac{\displaystyle R_1+R_2}
-{\displaystyle R_1+R_2+R_3}
+\frac{\displaystyle R_1 + R_2 + R_3 - R_3}
+{\displaystyle R_1 + R_2 + R_3}
+$$
+
+$$
+e_{ss} =
+\frac{\displaystyle R_1 + R_2}
+{\displaystyle R_1 + R_2 + R_3}
 $$
 
 ## Caso
 
-Sustituyendo los valores del caso:
+Sustituyendo:
 
 $$
 e_{ss} =
@@ -174,34 +184,22 @@ e_{ss} =
 \frac{\displaystyle 18}
 {\displaystyle 12 + 4.7 + 18}
 \right)
-$$
-
-$$
-e_{ss} =
-1 -
-\frac{\displaystyle 18}
-{\displaystyle 34.7}
 $$
 
 $$
 e_{ss} =
 \frac{\displaystyle 12 + 4.7}
 {\displaystyle 12 + 4.7 + 18}
-$$
-
-$$
+\rightarrow
 e_{ss} =
 \frac{\displaystyle 16.7}
 {\displaystyle 34.7}
-$$
-
-$$
-e_{ss} = 0.48
+= 0.48
 $$
 
 ## Control
 
-Sustituyendo los valores del control:
+Sustituyendo:
 
 $$
 e_{ss} =
@@ -211,62 +209,17 @@ e_{ss} =
 \frac{\displaystyle 10}
 {\displaystyle 1 + 1 + 10}
 \right)
-$$
-
-$$
-e_{ss} =
-1 -
-\frac{\displaystyle 10}
-{\displaystyle 12}
 $$
 
 $$
 e_{ss} =
 \frac{\displaystyle 1 + 1}
 {\displaystyle 1 + 1 + 10}
-$$
-
-$$
+\rightarrow
 e_{ss} =
 \frac{\displaystyle 2}
 {\displaystyle 12}
-$$
-
-$$
-e_{ss} = 0.167
-$$
-## Control
-
-Sustituyendo los valores del control:
-
-$$
-e_{ss} =
-\lim_{s \to 0}
-\left(
-1 -
-\frac{10}
-{1 + 1 + 10}
-\right)
-$$
-
-$$
-e_{ss} =
-1 -
-\frac{10}{12}
-$$
-
-$$
-e_{ss} =
-\frac{1+1}{1+1+10}
-$$
-
-$$
-e_{ss} =
-\frac{2}{12}
-$$
-
-$$
-e_{ss} = 0.167
+= 0.167
 $$
 
 ## Estabilidad del sistema
