@@ -139,48 +139,114 @@ Esta expresión permite comparar el comportamiento del sistema respiratorio en e
 
 ## Error en estado estacionario
 
-El error en estado estacionario se calcula como:
+El error en estado estacionario se calcula mediante:
 
 $$
-e_{ss} = 1 - \frac{R_3}{R_1 + R_2 + R_3}
+e_{ss} = \lim_{s \to 0}\left(1 - \frac{F_s(s)}{V_e(s)}\right)
+$$
+
+Como la función de transferencia del sistema es:
+
+$$
+\frac{F_s(s)}{V_e(s)} =
+\frac{R_3}
+{R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
+$$
+
+Entonces:
+
+$$
+e_{ss} =
+\lim_{s \to 0}
+\left(
+1 -
+\frac{R_3}
+{R_1LCs^2 + \left[L + R_1C(R_2+R_3)\right]s + (R_1+R_2+R_3)}
+\right)
+$$
+
+Al evaluar el límite cuando \(s \to 0\), los términos con \(s\) se hacen cero:
+
+$$
+e_{ss} =
+1 -
+\frac{R_3}{R_1+R_2+R_3}
 $$
 
 Simplificando:
 
 $$
-e_{ss} = \frac{R_1 + R_2 + R_3 - R_3}{R_1 + R_2 + R_3}
+e_{ss} =
+\frac{R_1+R_2+R_3-R_3}{R_1+R_2+R_3}
 $$
 
 $$
-e_{ss} = \frac{R_1 + R_2}{R_1 + R_2 + R_3}
+e_{ss} =
+\frac{R_1+R_2}{R_1+R_2+R_3}
 $$
 
-### Caso
+## Caso
 
 Sustituyendo los valores del caso:
 
 $$
-e_{ss} = \frac{12 + 4.7}{12 + 4.7 + 18}
+e_{ss} =
+\lim_{s \to 0}
+\left(
+1 -
+\frac{18}
+{12 + 4.7 + 18}
+\right)
 $$
 
 $$
-e_{ss} = \frac{16.7}{34.7}
+e_{ss} =
+1 -
+\frac{18}{34.7}
+$$
+
+$$
+e_{ss} =
+\frac{12+4.7}{12+4.7+18}
+$$
+
+$$
+e_{ss} =
+\frac{16.7}{34.7}
 $$
 
 $$
 e_{ss} = 0.48
 $$
 
-### Control
+## Control
 
 Sustituyendo los valores del control:
 
 $$
-e_{ss} = \frac{1 + 1}{1 + 1 + 10}
+e_{ss} =
+\lim_{s \to 0}
+\left(
+1 -
+\frac{10}
+{1 + 1 + 10}
+\right)
 $$
 
 $$
-e_{ss} = \frac{2}{12}
+e_{ss} =
+1 -
+\frac{10}{12}
+$$
+
+$$
+e_{ss} =
+\frac{1+1}{1+1+10}
+$$
+
+$$
+e_{ss} =
+\frac{2}{12}
 $$
 
 $$
