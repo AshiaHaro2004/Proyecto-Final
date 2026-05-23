@@ -109,7 +109,6 @@ $$
 F_s(t) = V_{R_3}(t) = R_3 i_2(t)
 $$
 
-
 ## Modelo de ecuaciones integro-diferenciales
 
 El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire, la presión respiratoria y la resistencia de las vías respiratorias.
