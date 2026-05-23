@@ -172,7 +172,7 @@ e_{ss} =
 {\displaystyle R_1 + R_2 + R_3}
 $$
 
-## Caso
+### Caso
 
 Sustituyendo:
 
@@ -197,7 +197,7 @@ e_{ss} =
 = 0.48
 $$
 
-## Control
+### Control
 
 Sustituyendo:
 
