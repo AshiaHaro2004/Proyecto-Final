@@ -85,41 +85,45 @@ Representa una condición patológica en la que existe inflamación bronquial, c
 
 Se implementa un controlador PID con el objetivo de mejorar la respuesta del sistema asmático. Este controlador busca reducir el error, estabilizar la señal y acercar la respuesta del caso patológico al comportamiento del sistema control.
 
+## Ecuaciones principales del sistema
+
+Las ecuaciones integro-diferenciales que describen el comportamiento del circuito RLC análogo al sistema respiratorio son:
+
+<div align="center">
+
+| Ecuación | Modelo |
+|---|---|
+| **Ec. 1** | $$R_1 i_1(t) + \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt = V_e(t)$$ |
+| **Ec. 2** | $$L\frac{di_2(t)}{dt} + (R_2+R_3)i_2(t) = \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt$$ |
+| **Ec. 3** | $$F_s(t) = V_{R_3}(t) = R_3 i_2(t)$$ |
+
+</div>
+
 ## Modelo de ecuaciones integro-diferenciales
 
-El sistema respiratorio se representa mediante un circuito RLC, donde los componentes eléctricos permiten describir la dinámica del flujo de aire, la presión respiratoria y la resistencia de las vías respiratorias.
-
-Para este modelo se consideran dos corrientes principales: $i_1(t)$ e $i_2(t)$. La corriente $i_1(t)$ representa el flujo asociado a la entrada del sistema, mientras que $i_2(t)$ se relaciona con la respuesta del sistema respiratorio. La diferencia entre ambas corrientes, $i_1(t)-i_2(t)$, está asociada al efecto de almacenamiento producido por la compliance pulmonar $C$.
-
-Las ecuaciones que describen el comportamiento del sistema son:
+A partir del análisis del circuito RLC, las corrientes de malla se pueden expresar de la siguiente manera:
 
 $$
-R_1 i_1(t) + \frac{1}{C}\int [i_1(t)-i_2(t)]dt = V_e(t)
-$$
-
-$$
-L\frac{di_2(t)}{dt} + (R_2+R_3)i_2(t) =
-\frac{1}{C}\int [i_1(t)-i_2(t)]dt
+i_1(t) =
+\frac{
+V_e(t) - \frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
+}
+{R_1}
 $$
 
 $$
-F_s(t)=V_{R3}(t)=R_3 i_2(t)
+i_2(t) =
+\frac{
+\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
+-
+L\frac{di_2(t)}{dt}
+}
+{R_2+R_3}
 $$
 
-Donde:
-
-- $R_1$ representa la resistencia inicial de las vías respiratorias.
-- $R_2$ representa una resistencia adicional del sistema respiratorio.
-- $R_3$ representa la resistencia asociada a la salida del sistema.
-- $L$ representa la inertancia del aire.
-- $C$ representa la compliance pulmonar.
-- $V_e(t)$ representa la presión respiratoria de entrada.
-- $i_1(t)$ representa la corriente o flujo de entrada.
-- $i_2(t)$ representa la corriente o flujo de salida del sistema.
-- $F_s(t)$ representa la señal de salida del sistema.
-- $V_{R3}(t)$ representa el voltaje en la resistencia $R_3$, equivalente a la salida del modelo.
-
-A partir de estas ecuaciones se puede obtener la función de transferencia del sistema, relacionando la entrada $V_e(t)$ con la salida $F_s(t)$. Esto permite analizar la respuesta respiratoria del modelo ante diferentes condiciones, como el caso control y el caso con alteración en las vías respiratorias.
+$$
+F_s(t) = V_{R_3}(t) = R_3 i_2(t)
+$$
 
 ## Función de transferencia
 
